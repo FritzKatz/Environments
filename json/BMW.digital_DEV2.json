@@ -1,0 +1,866 @@
+{
+  "ProjectName": "BMW.digital",
+  "ProjectEnvironment": "DEV2",
+      
+  "Domains": [        
+    {
+      "baseDomain": "bmw-dev2.com",
+      "akamaiCpCodes": "",
+      "domain": "www.bmw-dev2.com",
+      "coreDomain": "core.bmw-dev2.com",
+      "coreDomainSecure": "core.bmw-dev2.com",
+      "dealerDomain": "dealer.bmw-dev2.com",
+      "nccConfigDomain": "undefined"
+    }
+  ],
+  
+  "Infrastructure": {
+    "I04" : {
+      "id": "I04",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "DMZ",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I05" : {
+      "id": "I05",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "DMZ",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I06" : {
+      "id": "I06",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "DMZ",    
+     "flexServer": "liflex1.muc",
+
+      "state": "OK",
+      "clusterId": "WSR-50044",
+      "url": "http://core.bmw-dev2.com",
+      "DispatchAddresses": [
+        "http://core.bmw-dev2.com"
+      ],
+      "instanceName" : "cored-dev2",
+      "Instances": [
+        {
+          "id": "WI-93058",
+          "hostname": "ltwwwd1.bmwgroup.net",
+          "port": "5106",
+          "unixuser": "qqcdev2",
+          "dir": "/www/cored-dev2"
+        }
+      ]
+    }
+,
+    "I07" : {
+      "id": "I07",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "DMZ",    
+     "flexServer": "liflex1.muc",
+
+      "state": "OK",
+      "clusterId": "WSR-50022",
+      "url": "https://core.bmw-dev2.com",
+      "DispatchAddresses": [
+        "https://core.bmw-dev2.com"
+      ],
+      "instanceName" : "cored-dev2SSL",
+      "Instances": [
+        {
+          "id": "WI-93036",
+          "hostname": "ltwwwd1.bmwgroup.net",
+          "port": "4983",
+          "unixuser": "qqcdev2",
+          "dir": "/www/cored-dev2SSL"
+        }
+      ]
+    }
+,
+    "I08" : {
+      "id": "I08",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "DMZ",    
+     "flexServer": "liflex1.muc",
+
+      "state": "OK",
+      "clusterId": "WSR-50021",
+      "url": "http://www-origin.bmw-dev2.com",
+      "DispatchAddresses": [
+        "http://www-origin.bmw-dev2.com"
+      ],
+      "instanceName" : "origind-dev2",
+      "Instances": [
+        {
+          "id": "WI-93035",
+          "hostname": "ltwwwd1.bmwgroup.net",
+          "port": "5092",
+          "unixuser": "qqwdev2",
+          "dir": "/www/origind-dev2"
+        }
+      ]
+    }
+,
+    "I09" : {
+      "id": "I09",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "DMZ",    
+     "flexServer": "liflex1.muc",
+
+      "state": "OK",
+      "clusterId": "WSR-50043",
+      "url": "https://www-origin.bmw-dev2.com",
+      "DispatchAddresses": [
+        "https://www-origin.bmw-dev2.com"
+      ],
+      "instanceName" : "origind-dev2SSL",
+      "Instances": [
+        {
+          "id": "WI-93057",
+          "hostname": "ltwwwd1.bmwgroup.net",
+          "port": "5126",
+          "unixuser": "qqwdev2",
+          "dir": "/www/origind-dev2SSL"
+        }
+      ]
+    }
+,
+    "I13" : {
+      "id": "I13",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-50002",
+      "url": "http://cmx-dev2.bmwgroup.net",
+      "DispatchAddresses": [
+        "http://cmx-dev2.bmwgroup.net"
+      ],
+      "instanceName" : "cmx-publishd-dev2",
+      "Instances": [
+        {
+          "id": "WI-93016",
+          "hostname": "ltwebd1.bmwgroup.net",
+          "port": "4977",
+          "unixuser": "qqpdev2",
+          "dir": "/www/cmx-publishd-dev2"
+        }
+      ]
+    }
+,
+    "I14" : {
+      "id": "I14",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-50005",
+      "url": "https://cmx-dev2.bmwgroup.net",
+      "DispatchAddresses": [
+        "https://cmx-dev2.bmwgroup.net"
+      ],
+      "instanceName" : "cmx-publishd-dev2SSL",
+      "Instances": [
+        {
+          "id": "WI-93019",
+          "hostname": "ltwebd1.bmwgroup.net",
+          "port": "4987",
+          "unixuser": "qqpdev2",
+          "dir": "/www/cmx-publishd-dev2SSL"
+        }
+      ]
+    }
+,
+    "I15" : {
+      "id": "I15",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-50024",
+      "url": "http://core-dev2.bmwgroup.net",
+      "DispatchAddresses": [
+        "http://core-dev2.bmwgroup.net"
+      ],
+      "instanceName" : "cored-dev2",
+      "Instances": [
+        {
+          "id": "WI-93038",
+          "hostname": "ltwebd1.bmwgroup.net",
+          "port": "5106",
+          "unixuser": "qqcdev2",
+          "dir": "/www/cored-dev2"
+        }
+      ]
+    }
+,
+    "I16" : {
+      "id": "I16",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-50004",
+      "url": "https://core-dev2.bmwgroup.net",
+      "DispatchAddresses": [
+        "https://core-dev2.bmwgroup.net"
+      ],
+      "instanceName" : "cored-dev2SSL",
+      "Instances": [
+        {
+          "id": "WI-93018",
+          "hostname": "ltwebd1.bmwgroup.net",
+          "port": "4983",
+          "unixuser": "qqcdev2",
+          "dir": "/www/cored-dev2SSL"
+        }
+      ]
+    }
+,
+    "I18" : {
+      "id": "I18",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I24" : {
+      "id": "I24",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-50101",
+      "url": "https://cmx-author-dev2.bmwgroup.net",
+      "DispatchAddresses": [
+        "https://cmx-author-dev2.bmwgroup.net"
+      ],
+      "instanceName" : "cmx-authord-dev2SSL",
+      "Instances": [
+        {
+          "id": "WI-93115",
+          "hostname": "ltwebd1.bmwgroup.net",
+          "port": "5192",
+          "unixuser": "qqxdev2",
+          "dir": "/www/cmx-authord-dev2SSL"
+        }
+      ]
+    }
+,
+    "I42" : {
+      "id": "I42",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I43" : {
+      "id": "I43",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I44" : {
+      "id": "I44",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I45" : {
+      "id": "I45",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I19" : {
+      "id": "I19",
+      "type": "Glassfish",
+      "state": "OK",
+      "clusterId": "ASR-43961",
+      "instanceName": "cored-dev2",
+      "Instances": [
+        {
+          "id": "AI-87950",
+          "hostname": "ltapp13.bmwgroup.net",
+          "port": "43760",
+          "sslport": "43761",
+          "unixuser": "qqcdev2",
+          "dir": "/www/cored-dev2"
+        }
+      ]
+    }
+,
+    "I25" : {
+      "id": "I25",
+      "type": "CQ5",
+      "subtype": "author",
+      "state": "OK",
+      "clusterId": "CQA-DEV2",
+      "Instances": [
+        {
+          "hostname": "ltcmxdev02.bmwgroup.net",
+          "port": "4502",
+          "unixuser": "qqxdev2",
+          "dir": "/global/appcmx/cmx/ref-author"
+        }
+      ]
+    }
+,
+    "I26" : {
+      "id": "I26",
+      "type": "CQ5",
+      "subtype": "publish",
+      "state": "OK",
+      "clusterId": "CQP-DEV2",
+      "Instances": [
+        {
+          "hostname": "ltcmxdev02.bmwgroup.net",
+          "port": "4503",
+          "unixuser": "qqpdev2",
+          "dir": "/global/appcmx/cmx/ref-publish"
+        }
+      ]
+    }
+,
+    "I22" : {
+      "id": "I22",
+      "type": "Oracle",
+      "hostname": "tldb0103vm.bmwgroup.net",
+      "port": "1716",
+      "system_id": "coredd2",
+      "oraDbConnectstring": "coredd2.muc.bmw.de",
+      "schemas": {
+        "DUMUPDC" : {
+           "user": "DUMUPDC",
+           "password": "no_password_here"
+         } ,
+        "DUMUPDR" : {
+           "user": "DUMUPDR",
+           "password": "no_password_here"
+         } ,
+        "NEXT_CONFIG" : {
+           "user": "NEXT_CONFIG",
+           "password": "no_password_here"
+         } ,
+        "NEXTC" : {
+           "user": "NEXTC",
+           "password": "no_password_here"
+         } ,
+        "NEXTR" : {
+           "user": "NEXTR",
+           "password": "no_password_here"
+         } ,
+        "QQCDUM" : {
+           "user": "QQCDUM",
+           "password": "no_password_here"
+         } 
+      } 
+    }
+,
+    "I202" : {
+      "id": "I202",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-67649",
+      "url": "http://imm-dev2-gf3.bmwgroup.net",
+      "DispatchAddresses": [
+        "http://imm-dev2-gf3.bmwgroup.net",
+        "https://imm-dev2-gf3.bmwgroup.net"
+      ],
+      "instanceName" : "immd-dev2-b2bSSL",
+      "Instances": [
+        {
+          "id": "WI-111059",
+          "hostname": "ltintra101.bmwgroup.net",
+          "port": "9621",
+          "unixuser": "qqidev2",
+          "dir": "/www/immd-dev2-b2bSSL"
+        }
+      ]
+    }
+,
+    "I203" : {
+      "id": "I203",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "DMZ",    
+     "flexServer": "liflex1.muc",
+
+      "state": "OK",
+      "clusterId": "WSR-67648",
+      "url": "http://imm-dev2-gf3.bmw.com",
+      "DispatchAddresses": [
+        "http://imm-dev2-gf3.bmw.com",
+        "https://imm-dev2-gf3.bmw.com"
+      ],
+      "instanceName" : "immd-dev2-b2bSSL",
+      "Instances": [
+        {
+          "id": "WI-111058",
+          "hostname": "ltwww101.bmwgroup.net",
+          "port": "9619",
+          "unixuser": "qqidev2",
+          "dir": "/www/immd-dev2-b2bSSL"
+        }
+      ]
+    }
+,
+    "I204" : {
+      "id": "I204",
+      "type": "Glassfish",
+      "state": "OK",
+      "clusterId": "ASR-57592",
+      "instanceName": "immd-dev2",
+      "Instances": [
+        {
+          "id": "AI-102002",
+          "hostname": "ltapp103.bmwgroup.net",
+          "port": "42581",
+          "sslport": "42580",
+          "unixuser": "qqidev2",
+          "dir": "/www/immd-dev2"
+        }
+      ]
+    }
+,
+    "I205" : {
+      "id": "I205",
+      "type": "Oracle",
+      "hostname": "tldb0133vm.bmwgroup.net",
+      "port": "1746",
+      "system_id": "immddev2",
+      "oraDbConnectstring": "immddev2.muc.bmw.de",
+      "schemas": {
+        "IMMT_C" : {
+           "user": "IMMT_C",
+           "password": "no_password_here"
+         } ,
+        "IMMT_R" : {
+           "user": "IMMT_R",
+           "password": "no_password_here"
+         } 
+      } 
+    }
+,
+    "I401" : {
+      "id": "I401",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "DMZ",    
+     "flexServer": "liflex1.muc",
+
+      "state": "OK",
+      "clusterId": "WSR-50041",
+      "url": "http://mybmw.bmw-dev2.com",
+      "DispatchAddresses": [
+        "http://mybmw.bmw-dev2.com"
+      ],
+      "instanceName" : "ncc-mybmwd-dev2",
+      "Instances": [
+        {
+          "id": "WI-93055",
+          "hostname": "ltwwwd1.bmwgroup.net",
+          "port": "5123",
+          "unixuser": "qqndev2",
+          "dir": "/www/ncc-mybmwd-dev2"
+        }
+      ]
+    }
+,
+    "I402" : {
+      "id": "I402",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-67643",
+      "url": "http://ncc-dev2-gf3.bmwgroup.net",
+      "DispatchAddresses": [
+        "http://ncc-dev2-gf3.bmwgroup.net"
+      ],
+      "instanceName" : "ncc-webappd-dev2",
+      "Instances": [
+        {
+          "id": "WI-111053",
+          "hostname": "ltintra101.bmwgroup.net",
+          "port": "9627",
+          "unixuser": "qqndev2",
+          "dir": "/www/ncc-webappd-dev2"
+        }
+      ]
+    }
+,
+    "I403" : {
+      "id": "I403",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-66788",
+      "url": "https://ncc-dev2-gf3.bmwgroup.net",
+      "DispatchAddresses": [
+        "https://ncc-dev2-gf3.bmwgroup.net"
+      ],
+      "instanceName" : "ncc-webappd-dev2SSL",
+      "Instances": [
+        {
+          "id": "WI-110088",
+          "hostname": "ltintra101.bmwgroup.net",
+          "port": "9028",
+          "unixuser": "qqndev2",
+          "dir": "/www/ncc-webappd-dev2SSL"
+        }
+      ]
+    }
+,
+    "I405" : {
+      "id": "I405",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-67654",
+      "url": "http://ncc-services-dev2-gf3.bmwgroup.net",
+      "DispatchAddresses": [
+        "http://ncc-services-dev2-gf3.bmwgroup.net"
+      ],
+      "instanceName" : "ncc-servicesd-dev2",
+      "Instances": [
+        {
+          "id": "WI-111064",
+          "hostname": "ltintra101.bmwgroup.net",
+          "port": "4008",
+          "unixuser": "qqndev2",
+          "dir": "/www/ncc-servicesd-dev2"
+        }
+      ]
+    }
+,
+    "I406" : {
+      "id": "I406",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+
+      "state": "OK",
+      "clusterId": "WSR-66764",
+      "url": "https://ncc-services-dev2-gf3.bmwgroup.net",
+      "DispatchAddresses": [
+        "https://ncc-services-dev2-gf3.bmwgroup.net"
+      ],
+      "instanceName" : "ncc-servicesd-dev2SSL",
+      "Instances": [
+        {
+          "id": "WI-110060",
+          "hostname": "ltintra101.bmwgroup.net",
+          "port": "9003",
+          "unixuser": "qqndev2",
+          "dir": "/www/ncc-servicesd-dev2SSL"
+        }
+      ]
+    }
+,
+    "I407" : {
+      "id": "I407",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I413" : {
+      "id": "I413",
+      "type": "Apache",
+      "subtype": "http",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I414" : {
+      "id": "I414",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "Intranet",    
+      "state": "NO_CONFIG"
+    }
+,
+    "I408" : {
+      "id": "I408",
+      "type": "Glassfish",
+      "state": "OK",
+      "clusterId": "ASR-56765",
+      "instanceName": "ncc-webappd-dev2",
+      "Instances": [
+        {
+          "id": "AI-101099",
+          "hostname": "ltapp102.bmwgroup.net",
+          "port": "46931",
+          "sslport": "46930",
+          "unixuser": "qqndev2",
+          "dir": "/www/ncc-webappd-dev2"
+        }
+      ]
+    }
+,
+    "I409" : {
+      "id": "I409",
+      "type": "Glassfish",
+      "state": "OK",
+      "clusterId": "ASR-56742",
+      "instanceName": "ncc-servicesd-dev2",
+      "Instances": [
+        {
+          "id": "AI-101071",
+          "hostname": "ltapp102.bmwgroup.net",
+          "port": "46681",
+          "sslport": "46680",
+          "unixuser": "qqndev2",
+          "dir": "/www/ncc-servicesd-dev2"
+        }
+      ]
+    }
+,
+    "I411" : {
+      "id": "I411",
+      "type": "Oracle",
+      "hostname": "tldb0103vm.bmwgroup.net",
+      "port": "1716",
+      "system_id": "nccotod2",
+      "oraDbConnectstring": "nccotod2.muc.bmw.de",
+      "schemas": {
+        "CDS_OTO" : {
+           "user": "CDS_OTO",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_CRM" : {
+           "user": "CDS_OTO_CRM",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_FINANCE" : {
+           "user": "CDS_OTO_FINANCE",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_GARAGE" : {
+           "user": "CDS_OTO_GARAGE",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_IMMT" : {
+           "user": "CDS_OTO_IMMT",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_ORDER" : {
+           "user": "CDS_OTO_ORDER",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_PRICING" : {
+           "user": "CDS_OTO_PRICING",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO" : {
+           "user": "QQRCDSOTO",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_CRM" : {
+           "user": "QQRCDSOTO_CRM",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_FINANCE" : {
+           "user": "QQRCDSOTO_FINANCE",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_GARAGE" : {
+           "user": "QQRCDSOTO_GARAGE",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_IMMT" : {
+           "user": "QQRCDSOTO_IMMT",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_ORDER" : {
+           "user": "QQRCDSOTO_ORDER",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_PRICING" : {
+           "user": "QQRCDSOTO_PRICING",
+           "password": "no_password_here"
+         } 
+      } 
+    }
+,
+    "I601" : {
+      "id": "I601",
+      "type": "Apache",
+      "subtype": "https",    
+      "zone": "DMZ",    
+     "flexServer": "liflex1.muc",
+
+      "state": "OK",
+      "clusterId": "WSR-25201",
+      "url": "https://www.t-webtracking.bmw.de",
+      "DispatchAddresses": [
+        "https://www.t-webtracking.bmw.de"
+      ],
+      "instanceName" : "www-t-webtracking-bmw-deSSL",
+      "Instances": [
+        {
+          "id": "WI-68155",
+          "hostname": "ltwww3.bmwgroup.net",
+          "port": "6121",
+          "unixuser": "qqbmwa0",
+          "dir": "/www/www-t-webtracking-bmw-deSSL"
+        }
+      ]
+    }
+,
+    "I606" : {
+      "id": "I606",
+      "type": "Oracle",
+      "hostname": "tldb0141vm.bmwgroup.net",
+      "port": "1754",
+      "system_id": "x001dumt",
+      "oraDbConnectstring": "x001dumt.muc.bmw.de",
+      "schemas": {
+        "CDS_OTO" : {
+           "user": "CDS_OTO",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_GARAGE" : {
+           "user": "CDS_OTO_GARAGE",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_IMMT" : {
+           "user": "CDS_OTO_IMMT",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_ORDER" : {
+           "user": "CDS_OTO_ORDER",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_PRICING" : {
+           "user": "CDS_OTO_PRICING",
+           "password": "no_password_here"
+         } ,
+        "QQNEXT_CORE_ANALYTICS" : {
+           "user": "QQNEXT_CORE_ANALYTICS",
+           "password": "no_password_here"
+         } ,
+        "QQNEXT_CORE_ANALYTICS_READ" : {
+           "user": "QQNEXT_CORE_ANALYTICS_READ",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO" : {
+           "user": "QQRCDSOTO",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_GARAGE" : {
+           "user": "QQRCDSOTO_GARAGE",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_IMMT" : {
+           "user": "QQRCDSOTO_IMMT",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_ORDER" : {
+           "user": "QQRCDSOTO_ORDER",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_PRICING" : {
+           "user": "QQRCDSOTO_PRICING",
+           "password": "no_password_here"
+         } 
+      } 
+    }
+,
+    "I801" : {
+      "id": "I801",
+      "type": "Oracle",
+      "hostname": "tldb0103vm.bmwgroup.net",
+      "port": "1716",
+      "system_id": "nccotod2",
+      "oraDbConnectstring": "nccotod2.muc.bmw.de",
+      "schemas": {
+        "CDS_OTO" : {
+           "user": "CDS_OTO",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_CRM" : {
+           "user": "CDS_OTO_CRM",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_FINANCE" : {
+           "user": "CDS_OTO_FINANCE",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_GARAGE" : {
+           "user": "CDS_OTO_GARAGE",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_IMMT" : {
+           "user": "CDS_OTO_IMMT",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_ORDER" : {
+           "user": "CDS_OTO_ORDER",
+           "password": "no_password_here"
+         } ,
+        "CDS_OTO_PRICING" : {
+           "user": "CDS_OTO_PRICING",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO" : {
+           "user": "QQRCDSOTO",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_CRM" : {
+           "user": "QQRCDSOTO_CRM",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_FINANCE" : {
+           "user": "QQRCDSOTO_FINANCE",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_GARAGE" : {
+           "user": "QQRCDSOTO_GARAGE",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_IMMT" : {
+           "user": "QQRCDSOTO_IMMT",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_ORDER" : {
+           "user": "QQRCDSOTO_ORDER",
+           "password": "no_password_here"
+         } ,
+        "QQRCDSOTO_PRICING" : {
+           "user": "QQRCDSOTO_PRICING",
+           "password": "no_password_here"
+         } 
+      } 
+    }
+  }
+}
