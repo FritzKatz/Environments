@@ -14,12 +14,6 @@
 	}]);
 
 
-/*    app.controller('EnvsController', ['$scope', '$http', function($scope, $http) {
-        $scope.servers=[];
-        $http.get('xml/BMW.digital_DEV2.xml').success(function(data) {
-            $scope.servers = $.xml2json(data,true);
-        });
-    }]);*/
 
     app.directive('popover', function() {
         return function() {
