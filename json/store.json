@@ -3,7 +3,7 @@
         "no": 0, 
         "server_name": "motorola-xoom-with-wi-fi", 
         "description": "img/phones/motorola-xoom-with-wi-fi.0.jpg", 
-        "status": "ok", 
+        "status": "Not ok",
         "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Androserver_name 3.0 (Honeycomb)."
     }, 
     {
@@ -87,7 +87,7 @@
         "no": 12,         
         "server_name": "motorola-bravo-with-motoblur", 
         "description": "img/phones/motorola-bravo-with-motoblur.0.jpg", 
-        "status": "ok", 
+        "status": "Not ok",
         "snippet": "An experience to cheer about."
     }, 
     {
@@ -108,7 +108,7 @@
         "no": 15,         
         "server_name": "samsung-mesmerize-a-galaxy-s-phone", 
         "description": "img/phones/samsung-mesmerize-a-galaxy-s-phone.0.jpg", 
-        "status": "ok", 
+        "status": "Not ok",
         "snippet": "The Samsung Mesmerize\u2122 delivers a cinema quality experience like you\u2019ve never seen before. Its innovative 4\u201d touch display technology provserver_namees rich picture brilliance,even outdoors"
     }, 
     {
@@ -136,7 +136,7 @@
         "no": 19, 
         "server_name": "motorola-charm-with-motoblur", 
         "description": "img/phones/motorola-charm-with-motoblur.0.jpg", 
-        "status": "ok", 
+        "status": "Not ok",
         "snippet": "Motorola CHARM fits easily in your pocket or palm.  Includes MOTOBLUR service."
     }
 ]

@@ -33,7 +33,7 @@
 
 
     <div class="row" ng-controller="EnvsController as envs">    
-      <div class="col-md-9 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1">
 
         <div class="panel panel-info">
           <div class="panel-heading"></div>
@@ -41,10 +41,23 @@
 
               <form class="form-horizontal" role="form">
                 <div class="form-group">
-                  <label class="col-sm-1 control-label">Filter</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" id="inputFilter" data-ng-model="name">
+                    <label class="col-md-1 control-label">Filter</label>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" id="inputFilter" data-ng-model="name">
                     </div>
+
+                    <div class="checkbox col-md-2">
+                        <label>
+                            <input type="checkbox" value="" data-ng-model="checked">Incidents only
+                        </label>
+                    </div>
+
+
+                    <div class="col-md-1 col-md-offset-6">
+                        <button class="btn btn-info" ng-click="loadData()">Refresh</button>
+                    </div>
+                  <label></label>
+
                 </div>
               </form>    
             
@@ -58,13 +71,13 @@
                       <div class="col-md-1">                  
                         <th>#</th>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-md-2">
                         <th>Server Name</th>
                       </div>
                       <div class="col-md-3">
                         <th>Description</th>
                       </div>
-                      <div class="col-md-1">
+                      <div class="col-md-2">
                         <th>Status</th>
                       </div>
                       <div class="col-md-1">
@@ -76,7 +89,7 @@
               
 
               <tbody ng-repeat="server in servers | filter:name" popover>
-                <tr class="success" ng-class="{ 'danger': server.status!='ok' }">
+                <tr class="success" ng-class="{ 'danger': server.status!='ok' }" ng-hide="checked && server.status==='ok'">
                   <td>{{server.no}}</td>
                   <td>{{server.server_name}}</td>
                   <td>{{server.description}}</td>

@@ -1,17 +1,22 @@
 (function (){
 	var app = angular.module('envs', []);
 
-/*	app.controller('EnvsController', function(){
-		this.servers = data;
-	});*/
 
-	
-
-	app.controller('EnvsController', ['$scope', '$http', function($scope, $http) {
+/*	app.controller('EnvsController', ['$scope', '$http', function($scope, $http) {
 		$http.get('json/store.json').success(function(data) {
 			$scope.servers = data;
 		});		
-	}]);
+	}]);*/
+
+
+    app.controller('EnvsController', ['$scope', '$http', function($scope, $http) {
+        $scope.loadData = function() {
+            $http.get('json/store.json').success(function (data) {
+                $scope.servers = data;
+            });
+        };
+        $scope.loadData();
+    }]);
 
 
 
